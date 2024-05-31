@@ -1,0 +1,48 @@
+{
+    "intents": [
+        {
+            "intent_name": "start",
+            "keywords": ["hello", "hi", "hey","hie","hallo"],
+            "answers": [
+                "I am your HelperBot. Want to book Appoinment in Munchen city hosipital.  "
+            ]
+        },
+        {
+            "intent_name": "p_name",
+            "keywords": ["ok","ja","I want","yes","Yes"],
+            "answers": ["Please enter patient's full name :)"],
+            "next_expectation":""
+        },
+        {
+            "intent_name": "p_age",
+            "keywords": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
+                        31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+            "answers": ["Please enter patient's age :)"],
+            "next_expectation":""
+        },
+        {
+            "intent_name": "p_sex",
+            "keywords": ["No","others","female","male","M","F","m","f"],
+            "answers": ["Please enter patient's sex :)"],
+            "next_expectation":""
+        },
+        {
+            "intent_name": "date",
+            "keywords": ["id","email","gmail","mail"],
+            "answers": ["when do you want to book appoinment? Mention date in YYYY-MM-DD format :)"],
+            "next_expectation":""
+        },
+        {
+            "intent_name": "Time",
+            "keywords": ["id","email","gmail","mail"],
+            "answers": ["what time you want to book appoinment? Metion the time in 24:00 format :)"],
+            "next_expectation":""
+        },
+        {
+            "intent_name": "Thank you",
+            "keywords": ["id","email","gmail","mail"],
+            "answers": ["Thank you for booking appointment in Munchen city hospital"],
+            "next_expectation":""
+        }
+    ]
+}
