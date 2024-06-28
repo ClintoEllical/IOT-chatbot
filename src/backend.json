@@ -1,48 +1,101 @@
 {
     "intents": [
-        {
-            "intent_name": "start",
-            "keywords": ["hello", "hi", "hey","hie","hallo"],
-            "answers": [
-                "I am your HelperBot. Want to book Appoinment in Munchen city hosipital.  "
-            ]
-        },
-        {
-            "intent_name": "p_name",
-            "keywords": ["ok","ja","I want","yes","Yes"],
-            "answers": ["Please enter patient's full name :)"],
-            "next_expectation":""
-        },
-        {
-            "intent_name": "p_age",
-            "keywords": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
-                        31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
-            "answers": ["Please enter patient's age :)"],
-            "next_expectation":""
-        },
-        {
-            "intent_name": "p_sex",
-            "keywords": ["No","others","female","male","M","F","m","f"],
-            "answers": ["Please enter patient's sex :)"],
-            "next_expectation":""
-        },
-        {
-            "intent_name": "date",
-            "keywords": ["id","email","gmail","mail"],
-            "answers": ["when do you want to book appoinment? Mention date in YYYY-MM-DD format :)"],
-            "next_expectation":""
-        },
-        {
-            "intent_name": "Time",
-            "keywords": ["id","email","gmail","mail"],
-            "answers": ["what time you want to book appoinment? Metion the time in 24:00 format :)"],
-            "next_expectation":""
-        },
-        {
-            "intent_name": "Thank you",
-            "keywords": ["id","email","gmail","mail"],
-            "answers": ["Thank you for booking appointment in Munchen city hospital"],
-            "next_expectation":""
-        }
+      {
+        "intent_name": "start",
+        "keywords": ["hello", "hi", "hey"],
+        "answers": ["Hello! Do you want to book an appointment for you or a family member?"],
+        "next_expectation": "book_appointment"
+      },
+      {
+        "intent_name": "book_appointment",
+        "keywords": ["book", "appointment", "schedule", "yes", "yea", "ja", "y"],
+        "answers": ["Please enter the patient's full name :)"],
+        "next_expectation": "p_name"
+      },
+      {
+        "intent_name": "p_name",
+        "keywords": [],
+        "answers": ["Please enter the patient's age :)"],
+        "next_expectation": "p_age"
+      },
+      {
+        "intent_name": "p_age",
+        "keywords": [],
+        "answers": ["Please enter the patient's sex (male, female, other) :)"],
+        "next_expectation": "p_sex"
+      },
+      {
+        "intent_name": "p_sex",
+        "keywords": ["male", "female", "other", "m"],
+        "answers": ["When do you want to book the appointment? Mention the date in YYYY-MM-DD format :)"],
+        "next_expectation": "date"
+      },
+      {
+        "intent_name": "date",
+        "keywords": [],
+        "answers": ["What time do you want to book the appointment? Mention the time in HH:MM format :)"],
+        "next_expectation": "time"
+      },
+      {
+        "intent_name": "time",
+        "keywords": [],
+        "answers": ["Is the patient a resident of Munich? (yes/no)"],
+        "next_expectation": "resident_munich"
+      },
+      {
+        "intent_name": "resident_munich",
+        "keywords": ["yes", "no"],
+        "answers": ["Is the patient disabled? (yes/no)"],
+        "next_expectation": "disabled"
+      },
+      {
+        "intent_name": "disabled",
+        "keywords": ["yes", "no"],
+        "answers": ["Is the patient a member or known to anyone in Munich City Hospital Staff Association? (yes/no)"],
+        "next_expectation": "hospital_staff_association"
+      },
+      {
+        "intent_name": "hospital_staff_association",
+        "keywords": ["yes", "no"],
+        "answers": ["Does patient have any health insurance coverage? (yes/no)"],
+        "next_expectation": "insurance"
+      },
+      {
+        "intent_name": "insurance",
+        "keywords": ["yes", "no"],
+        "answers": ["What type of insurance do patient have? (Public/Private)"],
+        "next_expectation": "insurance_type"
+      },
+      {
+        "intent_name": "insurance_type",
+        "keywords": ["public", "private"],
+        "answers": ["Please enter you email id?"],
+        "next_expectation": "email"
+      },
+      {
+        "intent_name": "email",
+        "keywords": [],
+        "answers": ["Do you want to a reminder before appoinment? (yes/no)"],
+        "next_expectation": "reminder"
+      },
+      {
+        "intent_name": "reminder",
+        "keywords": [],
+        "answers": ["Do you want to confirm the appointment? (yes/no)"],
+        "next_expectation": "confirm"
+      },
+      {
+        "intent_name": "confirm",
+        "keywords": ["yes", "no"],
+        "answers": ["Thank you for booking an appointment. Have a great day! Do you want any further contact info ?"],
+        "next_expectation": "end"
+      },
+      {
+        "intent_name": "end",
+        "keywords": [],
+        "answers": ["If you have more queries, Please connect with our customer service.   Phone: +49 1597898563   Email: customer@munichcityhospital.com                 Thank you for booking.Lets meet soon"  ],
+        "next_expectation": "start"
+      }
     ]
-}
+  }
+  
